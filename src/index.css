@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-roboto text-charcoal bg-white;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-montserrat font-bold text-midnight;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-coral text-white font-montserrat font-semibold px-6 py-3 rounded-md transition-all hover:bg-coral-dark hover:shadow-lg active:scale-95;
+  }
+  .btn-secondary {
+    @apply bg-gold text-white font-montserrat font-semibold px-6 py-3 rounded-md transition-all hover:bg-gold-dark hover:shadow-lg active:scale-95;
+  }
+  .nav-link {
+    @apply text-charcoal hover:text-gold transition-colors font-montserrat font-medium;
+  }
+}
+
+@keyframes bounce-subtle {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-3px); }
+}
+
+.animate-bounce-subtle {
+  animation: bounce-subtle 2s infinite;
+}
